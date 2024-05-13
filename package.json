@@ -1,0 +1,36 @@
+{
+  "name": "next-cms-frontend-govuk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:network": "next dev -H $(ifconfig $(route -n get default | awk '/interface: / {print $2}') | awk '/inet / {print $2}')  ",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cy:open": "cypress open",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "next": "14.2.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.1.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^15.0.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cypress": "^13.8.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
