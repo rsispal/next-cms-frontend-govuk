@@ -1,0 +1,32 @@
+query ArticleById($getArticleByIdId: String!) {
+  getArticleById(id: $getArticleByIdId) {
+    id
+    title
+    status
+    publishedOn
+    author
+    content {
+      ... on Header {
+        value
+      }
+      ... on Paragraph {
+        values
+      }
+      ... on Image {
+        src
+      }
+      ... on OrderedList {
+        values
+      }
+      ... on UnorderedList {
+        values
+      }
+      ... on Divider {
+        value
+      }
+      ... on BlockQuote {
+        value
+      }
+    }
+  }
+}
