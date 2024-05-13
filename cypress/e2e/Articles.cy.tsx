@@ -15,10 +15,9 @@ describe("<ArticlesPage />", () => {
       .eq(1)
       .find("a")
       .should("have.attr", "href")
-      .then((href) => {
+      .then((href: JQuery<HTMLAnchorElement>) => {
         expect(href).to.equal("/articles/002");
-
-        cy.visit(href);
+        cy.visit(href as unknown as string);
       });
   });
 });
