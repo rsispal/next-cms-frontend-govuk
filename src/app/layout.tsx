@@ -29,13 +29,10 @@ export default function RootLayout({
             <GovUK.TopNav.NavLink as={Link} to="/">
               Home
             </GovUK.TopNav.NavLink>
-            <GovUK.TopNav.NavLink as={Link} to="/forms">
-              Forms
-            </GovUK.TopNav.NavLink>
           </GovUK.TopNav>
           <GovUK.Page.WidthContainer>
             <GovUK.PhaseBanner level="alpha">
-              This part of GOV.UK is being rebuilt – <Link href="https://example.com">find out what that means</Link>
+              This service is in Alpha stage. See <Link href="https://example.com">find out what that means</Link>
             </GovUK.PhaseBanner>
             <GovUK.Page.Main>{children}</GovUK.Page.Main>
           </GovUK.Page.WidthContainer>
