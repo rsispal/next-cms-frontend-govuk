@@ -1,3 +1,4 @@
+const typeDefs = `
 enum ArticleStatus {
   UNKNOWN
   DRAFT
@@ -50,3 +51,7 @@ type Query {
   getAllArticles: [Article]!
   getArticleById(id: String!): Article
 }
+
+`;
+
+export default typeDefs;
